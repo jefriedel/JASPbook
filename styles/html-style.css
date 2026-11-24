@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --bs-body-font-family: "Atkinson Hyperlegible Next", sans-serif;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  line-height: 1.6;
+}
+
+/* Key terms: [term]{.keyterm} — colour from the original book (\keytermcol rgb(.6,0,.8)) */
+.keyterm {
+  color: #9900cc;
+  font-weight: 700;
+}
+
+/* Terms with a glossary definition: dotted underline + help cursor hint at the popup */
+.keyterm[data-definition] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+
+.keyterm[data-definition]:focus-visible {
+  outline: 2px solid #9900cc;
+  outline-offset: 2px;
+  border-radius: 2px;
+}

@@ -2,22 +2,50 @@
 
 Null hypothesis testing is one of the most ubiquitous elements to statistical theory. The vast majority of scientific papers report the results of some hypothesis test or another. As a consequence it is almost impossible to get by in science without having at least a cursory understanding of what a $p$-value means, making this one of the most important chapters in the book. As usual, I'll end the chapter with a quick recap of the key ideas that we've talked about:
 
-- Research hypotheses and statistical hypotheses. Null and alternative hypotheses. (Section [\[sec:hypotheses\]](#sec:hypotheses){reference-type="ref" reference="sec:hypotheses"}).
+- Research hypotheses and statistical hypotheses. Null and alternative hypotheses. (@sec-hypotheses).
 
-- Type 1 and Type 2 errors (Section [\[sec:errortypes\]](#sec:errortypes){reference-type="ref" reference="sec:errortypes"})
+- Type 1 and Type 2 errors (@sec-errortypes)
 
-- Test statistics and sampling distributions (Section [\[sec:teststatistics\]](#sec:teststatistics){reference-type="ref" reference="sec:teststatistics"})
+- Test statistics and sampling distributions (@sec-teststatistics)
 
-- Hypothesis testing as a decision making process (Section [\[sec:decisionmaking\]](#sec:decisionmaking){reference-type="ref" reference="sec:decisionmaking"})
+- Hypothesis testing as a decision making process (@sec-decisionmaking)
 
-- $p$-values as "soft" decisions (Section [\[sec:pvalue\]](#sec:pvalue){reference-type="ref" reference="sec:pvalue"})
+- $p$-values as "soft" decisions (@sec-pvalue)
 
-- Writing up the results of a hypothesis test (Section [\[sec:writeup\]](#sec:writeup){reference-type="ref" reference="sec:writeup"})
+- Writing up the results of a hypothesis test (@sec-writeup)
 
-- Running the hypothesis test in practice (Section [\[sec:runhyp\]](#sec:runhyp){reference-type="ref" reference="sec:runhyp"})
+- Running the hypothesis test in practice (@sec-runhyp)
 
-- Effect size and power (Section [\[sec:effectsize\]](#sec:effectsize){reference-type="ref" reference="sec:effectsize"})
+- Effect size and power (@sec-effectsize)
 
-- A few issues to consider regarding hypothesis testing (Section [\[sec:nhstmess\]](#sec:nhstmess){reference-type="ref" reference="sec:nhstmess"})
+- A few issues to consider regarding hypothesis testing (@sec-nhstmess)
 
-Later in the book, in Chapter [\[ch:bayes\]](#ch:bayes){reference-type="ref" reference="ch:bayes"}, I'll revisit the theory of null hypothesis tests from a Bayesian perspective and introduce a number of new tools that you can use if you aren't particularly fond of the orthodox approach. But for now, though, we're done with the abstract statistical theory, and we can start discussing specific data analysis tools.
+Later in the book, in @sec-bayes, I'll revisit the theory of null hypothesis tests from a Bayesian perspective and introduce a number of new tools that you can use if you aren't particularly fond of the orthodox approach. But for now, though, we're done with the abstract statistical theory, and we can start discussing specific data analysis tools.
+
+[^1]: The quote comes from Wittgenstein's (1922) text, *Tractatus Logico-Philosphicus*.
+
+[^2]: A technical note. The description below differs subtly from the standard description given in a lot of introductory texts. The orthodox theory of null hypothesis testing emerged from the work of Sir Ronald Fisher and Jerzy Neyman in the early 20th century; but Fisher and Neyman actually had very different views about how it should work. The standard treatment of hypothesis testing that most texts use is a hybrid of the two approaches. The treatment here is a little more Neyman-style than the orthodox view, especially as regards the meaning of the $p$ value.
+
+[^3]: My apologies to anyone who actually believes in this stuff, but on my reading of the literature on ESP it's just not reasonable to think this is real. To be fair, though, some of the studies are rigorously designed, so it's actually an interesting area for thinking about psychological research design. And of course it's a free country so you can spend your own time and effort proving me wrong if you like, but I wouldn't think that's a terribly practical use of your intellect.
+
+[^4]: This analogy only works if you're from an adversarial legal system like UK/US/Australia. As I understand these things, the French inquisitorial system is quite different.
+
+[^5]: An aside regarding the language you use to talk about hypothesis testing. First, one thing you really want to avoid is the word "prove". A statistical test really doesn't *prove* that a hypothesis is true or false. Proof implies certainty and, as the saying goes, statistics means never having to say you're certain. On that point almost everyone would agree. However, beyond that there's a fair amount of confusion. Some people argue that you're only allowed to make statements like "rejected the null", "failed to reject the null", or possibly "retained the null". According to this line of thinking you can't say things like "accept the alternative" or "accept the null". Personally I think this is too strong. In my opinion, this conflates null hypothesis testing with Karl Popper's falsificationist view of the scientific process. Whilst there are similarities between falsificationism and null hypothesis testing, they aren't equivalent. However, whilst I personally think it's fine to talk about accepting a hypothesis (on the proviso that "acceptance" doesn't actually mean that it's necessarily true, especially in the case of the null hypothesis), many people will disagree. And more to the point, you should be aware that this particular weirdness exists so that you're not caught unawares by it when writing up your own results.
+
+[^6]: Strictly speaking, the test I just constructed has $\alpha = .057$, which is a bit too generous. However, if I'd chosen 39 and 61 to be the boundaries for the critical region then the critical region only covers 3.5% of the distribution. I figured that it makes more sense to use 40 and 60 as my critical values, and be willing to tolerate a 5.7% type I error rate, since that's as close as I can get to a value of $\alpha = .05$.
+
+[^7]: The internet seems fairly convinced that Ashley said this, though I can't for the life of me find anyone willing to give a source for the claim.
+
+[^8]: That's $p = .000000000000000000000000136$ for folks that don't like scientific notation!
+
+[^9]: Note that the here has nothing to do with a $p$ value. The argument in the JASP binomial test corresponds to the probability of making a correct response, according to the null hypothesis. In other words, it's the $\theta$ value.
+
+[^10]: Although in practice a very small effect size is worrying because even very minor methodological flaws might be responsible for the effect, and in practice no experiment is perfect so there are always methodological issues to worry about.
+
+[^11]: Notice that the true population parameter $\theta$ doesn't necessarily correspond to an immutable fact of nature. In this context $\theta$ is just the true probability that people would correctly guess the colour of the card in the other room. As such the population parameter can be influenced by all sorts of things. Of course, this is all on the assumption that ESP actually exists!
+
+[^12]: One possible exception to this is when researchers study the effectiveness of a new medical treatment and they specify in advance what an important effect size would be to detect, for example over and above any existing treatment. In this way some information about the potential value of a new treatment can be obtained.
+
+[^13]: Although this book describes both Neyman's and Fisher's definition of the $p$ value, most don't. Most introductory textbooks will only give you the Fisher version.
+
+[^14]: In this case, the Pearson chi-square test of independence (@sec-chisquare)

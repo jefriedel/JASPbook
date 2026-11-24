@@ -1,0 +1,11 @@
+% Simplified versions of the book's custom LaTeX macros (real ones: tex/header.tex,
+% tex/contentstyle.tex). Pandoc doesn't read those files, so without these it drops the
+% macros AND their text. tex_to_qmd.sh puts this file in front of every chapter.
+% Add a line here whenever a scan finds another custom macro.
+
+\newcommand{\FOOTNOTE}[1]{\footnote{#1}}
+% \keyterm -> [term]{.keyterm} (via \textcolor, which keyterms.lua turns into the class)
+\newcommand{\keyterm}[1]{\textcolor{keyterm}{#1}}
+\newcommand{\SUBSECTION}[1]{\subsection{#1}}
+\newcommand{\boldm}[1]{#1}
+\newcommand{\HR}{}

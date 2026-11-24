@@ -1,0 +1,11 @@
+<!-- upstream: chapter01_whystats/intro -->
+# Why do we learn statistics? {#sec-whystats}
+
+>  *"Thou shalt not answer questionnaires\
+> Or quizzes upon World Affairs,\
+> Nor with compliance\
+> Take any test. Thou shalt not sit\
+> With statisticians nor commit\
+> A social science\"* \
+> -- W.H. Auden[^1]
+

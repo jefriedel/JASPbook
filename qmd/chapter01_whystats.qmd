@@ -1,0 +1,6 @@
+{{< include _sections/01_intro.qmd >}}
+{{< include _sections/01_whywhywhy.qmd >}}
+{{< include _sections/01_simpsons_paradox.qmd >}}
+{{< include _sections/01_stats_in_psych.qmd >}}
+{{< include _sections/01_stats_in_life.qmd >}}
+{{< include _sections/01_research_methods.qmd >}}

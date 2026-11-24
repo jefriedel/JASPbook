@@ -1,0 +1,16 @@
+<!-- Hover / focus / tap popups for key terms (see styles/keyterms.lua, glossary.yml).
+     Uses tippy.js, which Quarto already loads for its footnote and cross-reference popups. -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof window.tippy !== "function") return;
+  window.tippy(".keyterm[data-definition]", {
+    content: function (el) { return el.getAttribute("data-definition"); },
+    allowHTML: true,
+    theme: "quarto",            // same look as Quarto's footnote popups
+    placement: "top",
+    maxWidth: 380,
+    trigger: "mouseenter focus click",
+    aria: { content: "describedby" }
+  });
+});
+</script>

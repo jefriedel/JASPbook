@@ -11,3 +11,9 @@
 /_book/
 /qmd/*.html
 /qmd/*_files/
+
+# local reference / build leftovers
+/Original LSJ.pdf
+/build/log.txt
+/build/version.*
+/tex/not_ready/

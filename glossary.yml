@@ -1,0 +1,19 @@
+# Key-term definitions, shown when a reader hovers over (or tabs to / taps) a
+# [term]{.keyterm} in the HTML book. Used by styles/keyterms.lua.
+#
+# - Keys match the term's text, ignoring capitals: "Belief bias effect" matches belief bias effect.
+# - Markdown works in definitions (*italic*, **bold**).
+# - If the text in the book differs from the key, point it at the key:
+#     [biased]{.keyterm term="belief bias effect"}
+# - Terms with no entry here are still coloured, just without a popup.
+#
+# Find terms that still need a definition:  .qmd_translation/keyterms_missing.sh
+
+belief bias effect: >-
+  DRAFT — The tendency to judge whether an argument is valid by whether its
+  conclusion seems believable, rather than by its logical structure.
+
+simpson's paradox: >-
+  DRAFT — A pattern that appears in every subgroup of the data reverses (or
+  disappears) when the subgroups are combined, usually because a third variable
+  is related to both.

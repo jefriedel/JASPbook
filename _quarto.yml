@@ -2,12 +2,18 @@ project:
   type: book
 book: 
   title: "Learning Statistics with JASP"
+  author: Jonathan E. Friedel
   chapters:
+    - index.qmd
     - qmd/abstract.qmd
-    - qmd/chapter09_hypothesistesting.qmd
+    - qmd/chapter01_whystats.qmd
+bibliography: tex/refs.bib
+filters:
+  - styles/keyterms.lua        # key-term colour + glossary.yml definitions
 format:
-  html: 
+  html:
     theme: cosmo
     css: styles/html-style.css
+    include-after-body: styles/keyterms.html   # hover popups for key terms
   typst:
     include-in-header: styles/typst-style.typ

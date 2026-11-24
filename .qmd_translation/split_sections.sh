@@ -6,7 +6,7 @@
 #   writes <qmd_root>/.sections/<chapter>/<label>.qmd   (one per section)
 #          <qmd_root>/.sections/<chapter>/_order.txt    (section order in the original chapter)
 #
-# <label> comes from the LaTeX \label, e.g. "## Making decisions []{#sec:decisionmaking ...}"
+# <label> comes from the LaTeX \label, e.g. "## Making decisions {#sec-decisionmaking}"
 # becomes sec-decisionmaking.qmd. Headings without a label get a name made from the title.
 # Everything before the first "## " (the chapter title and intro text) goes to intro.qmd.
 # These files are the merge BASE for pull_upstream.sh — never edit them.
@@ -31,7 +31,9 @@ awk -v out="$out" '
   }
   BEGIN { start("intro") }
   /^## / {
-    if (match($0, /\{#sec:[^ }]+/)) {
+    if (match($0, /\{#sec-[^ }]+/)) {                    # ## Title {#sec-x}
+      label = substr($0, RSTART + 2, RLENGTH - 2)
+    } else if (match($0, /\{#sec:[^ }]+/)) {             # older form []{#sec:x ...}
       label = "sec-" substr($0, RSTART + 6, RLENGTH - 6)
     } else {
       label = tolower(substr($0, 4))

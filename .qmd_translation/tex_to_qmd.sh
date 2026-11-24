@@ -14,18 +14,24 @@ mkdir -p "$root/.raw"
 
 # pandoc doesn't understand \epsfig, so rewrite it as \includegraphics.
 # \begin{center}, \end{center} and \HR inside a figure make pandoc output raw HTML
-# instead of a markdown figure, so drop them.
+# instead of a markdown figure, so drop them. \cline{2-3} (partial table rule) would
+# otherwise leave "2-3" as text in the table.
 # Done on a temporary copy so tex/ is never modified.
+# macros.tex (simplified custom macros like \keyterm, \FOOTNOTE) goes in front.
 tmp="$(mktemp -t "$name").tex"
-perl -pe '
+cat "$here/macros.tex" "tex/$name.tex" | perl -pe '
   s/\\epsfig\{\s*file\s*=\s*([^,}]+?)\s*,.*?width\s*=\s*([^,}]+?)\s*\}/\\includegraphics[width=$2]{$1}/g;
   s/\\(begin|end)\{center\}//g;
   s/^\s*\\HR\s*$//;
-' "tex/$name.tex" > "$tmp"
+  s/\\cline\{[^}]*\}//g;
+' > "$tmp"
 
-# Lua filter changes image extensions to .png (see fix-images.lua).
+# Lua filters: image extensions -> .png (fix-images.lua);
+# \label/\ref -> Quarto cross-references (crossrefs.lua).
 quarto pandoc "$tmp" -f latex -t markdown --wrap=none \
   --lua-filter="$here/fix-images.lua" \
+  --lua-filter="$here/crossrefs.lua" \
+  --lua-filter="$here/keyterms.lua" \
   -o "$root/.raw/$name.qmd"
 
 rm "$tmp"
