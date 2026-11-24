@@ -1,0 +1,21 @@
+# Abstract
+
+## Overview
+
+*Learning Statistics with JASP* covers the contents of an introductory statistics class, as typically taught to undergraduate psychology students. The book discusses how to get started in JASP as well as giving an introduction to data manipulation. From a statistical perspective, the book discusses descriptive statistics and graphing first, followed by chapters on probability theory, sampling and estimation, and null hypothesis testing. After introducing the theory, the book covers the analysis of contingency tables, correlation, *t*-tests, regression, ANOVA and factor analysis. Bayesian statistics is covered at the end of the book.
+
+## Citation
+
+Navarro, D.J., Foxcroft, D.R., & Faulkenberry, T.J. (2026). *Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners* (J.E. Friedel, adapt.). (Version 2.0). (Original work published, 2025)
+
+## Summary of Modifications
+
+This textbook is an adaptation of *Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners* originally licensed under CC BY-SA 4.0. This adapted version was created by Jonathan E. Friedel (Georgia Southern University) for PSYC 2231, Research and Analysis I, and is likewise licensed under CC BY-SA 4.0.
+
+Navarro, D.J., Foxcroft, D.R., & Faulkenberry, T.J. (2025). *Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners*. (Version 2.0). https://learnstatswithjasp.com
+
+- Converted from original LaTeX files into Quarto markdown files.
+  - Modified styles where appropriate for accessibility.
+- Reorganized chapters to match PSYC 2231 course syllabus.
+
+

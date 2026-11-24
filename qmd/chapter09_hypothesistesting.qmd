@@ -1,0 +1,22 @@
+{{< include _sections/ch09-intro.qmd >}}
+
+{{< include _sections/ch09-sec-hypotheses.qmd >}}
+
+{{< include _sections/ch09-sec-errortypes.qmd >}}
+
+{{< include _sections/ch09-sec-teststatistics.qmd >}}
+
+{{< include _sections/ch09-sec-decisionmaking.qmd >}}
+
+{{< include _sections/ch09-sec-pvalue.qmd >}}
+
+{{< include _sections/ch09-sec-writeup.qmd >}}
+
+{{< include _sections/ch09-sec-runhyp.qmd >}}
+
+{{< include _sections/ch09-sec-effectsize.qmd >}}
+
+{{< include _sections/ch09-sec-nhstmess.qmd >}}
+
+{{< include _sections/ch09-summary.qmd >}}
+

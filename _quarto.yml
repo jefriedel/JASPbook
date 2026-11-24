@@ -1,0 +1,13 @@
+project:
+  type: book
+book: 
+  title: "Learning Statistics with JASP"
+  chapters:
+    - qmd/abstract.qmd
+    - qmd/chapter09_hypothesistesting.qmd
+format:
+  html: 
+    theme: cosmo
+    css: styles/html-style.css
+  typst:
+    include-in-header: styles/typst-style.typ

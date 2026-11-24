@@ -1,3 +1,13 @@
 **/.Rhistory
 **/lsr.ps
 **/.DS_Store
+
+/.quarto/
+**/*.quarto_ipynb
+
+/.luarc.json
+
+# Quarto render output
+/_book/
+/qmd/*.html
+/qmd/*_files/

@@ -1,0 +1,11 @@
+intro
+sec-hypotheses
+sec-errortypes
+sec-teststatistics
+sec-decisionmaking
+sec-pvalue
+sec-writeup
+sec-runhyp
+sec-effectsize
+sec-nhstmess
+summary

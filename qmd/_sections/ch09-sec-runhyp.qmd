@@ -1,0 +1,9 @@
+<!-- upstream: chapter09_hypothesistesting/sec-runhyp -->
+## Running the hypothesis test in practice []{#sec:runhyp label="sec:runhyp"}
+
+At this point some of you might be wondering if this is a "real" hypothesis test, or just a toy example that I made up. It's real. In the previous discussion I built the test from first principles, thinking that it was the simplest possible problem that you might ever encounter in real life. However, this test already exists. It's called the *binomial test*, and it's implemented by JASP as one of the statistical analyses available when you hit the 'Frequencies' button. To test the null hypothesis that the response probability is one-half , and using data in which of people made the correct response, available in the data file, we get the results shown in Figure [1.4](#fig:binomialtest){reference-type="ref" reference="fig:binomialtest"}.
+
+![Binomial test analysis and results in JASP](../img/nhst/binomialtest.png){#fig:binomialtest width="14cm"}
+
+Right now, this output looks pretty unfamiliar to you, but you can see that it's telling you more or less the right things. Specifically, the $p$-value of 0.02 is less than the usual choice of $\alpha = .05$, so you can reject the null. We'll talk a lot more about how to read this sort of output as we go along, and after a while you'll hopefully find it quite easy to read and understand.
+
